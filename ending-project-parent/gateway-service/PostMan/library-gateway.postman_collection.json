@@ -1,0 +1,2132 @@
+{
+	"info": {
+		"_postman_id": "f3ba7522-cedb-49ef-a5f3-4d6b56deee3f",
+		"name": "library-gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22935470"
+	},
+	"item": [
+		{
+			"name": "login user role admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hoang\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user role default",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thang\",\r\n    \"password\":\"12345\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find your user information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all user with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NDM5MjAzLCJleHAiOjE2Njc0OTk2ODN9.casmFxq8wbzvLIbV_0uXW5hpUiJeqiiv5ZOxyWhTxDLX4oRW-2Tzakqb4xuu_6O-xMLImAxeUy6q1l9LzvoGnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all user with role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find a user with role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NDM5NDU5LCJleHAiOjE2Njc0OTk5Mzl9.eonUwmV-AStYMG7HuTVztdN6Sw-x9CuNCYHXgVv3_3K-TZUbSgPviIcyKHBSiwYZmrG4SVsG4-QZu2jgp0WlqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/findUser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"findUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find a user with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgwNDA2LCJleHAiOjE2Njc0NDA4ODZ9.PiA8XAEk51INGBFct-_2v8szcNvydA5tZAwXndQXLfr6PGbkchq4VjDcFMSIyv3iyc0Mzvn8nm8LN9iEi9Br2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/findUser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"findUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new user with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3Mzc3ODg4LCJleHAiOjE2Njc0MzgzNjh9.6LjvkOqo5Kt_EJYl8p-8ykGvgVlzBv-veuLNbOf7_xZFhhoZZmDOavHsLOxueaMCNC9wpDMTiIXdZNfwpqKzWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thinh\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran hoang thinh\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"long\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh long\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3Mzc3ODg4LCJleHAiOjE2Njc0MzgzNjh9.6LjvkOqo5Kt_EJYl8p-8ykGvgVlzBv-veuLNbOf7_xZFhhoZZmDOavHsLOxueaMCNC9wpDMTiIXdZNfwpqKzWg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran quoc viet\",\r\n    \"roleName\":\"default\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh viet\",\r\n    \"roleName\":\"default\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgyODg1LCJleHAiOjE2Njc0NDMzNjV9.lzJIng5doWqnSBVUiIiiwot1INbffYmFS6LRoeGijOyfpGGj1D3Wbc0rymX1SBBuVDXhl04eN1g5IjXFZfMA8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgyODE1LCJleHAiOjE2Njc0NDMyOTV9.-UAOx-T0y5V_UrAGrZeUxpU8XUxKFWCFIR0mSHgHm20l_0vLncnnEJMn8YQZym-t6S2nrTtkvXGF4GBuJ5jrFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all author",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzA4NjI1LCJleHAiOjE2Njc3NjkxMDV9.PJUO6Yh9HZghz_dJKuqkkMhELscKaipPs3jy5YbRyVwIHU8w3jof-DjHHi7IyC5FPetlO0JJ7ManzX6qvaFWNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find author by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create author role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorName\": \"Nguyen Khanh Toan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create author role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorName\": \"Tran Viet Duc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update author role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorName\": \" Tran Viet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update author role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorName\": \"Nguyen Long\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete author role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete author role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/author/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"author",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find category by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create category role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\":\"Khoa hoc va cuoc song\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create category role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\":\"Khoa hoc va cuoc song\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update category role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"Lich su can dai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update category role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"categoryName\": \"Lich su hien dai\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete category role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete category role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/category/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"category",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3ODc3NDMwLCJleHAiOjE2Njc5Mzc5MTB9.rKuatWbzmlngrOemychL9MJdp0ZQbJRq3UaXFvf3BDIBLBsPzTao-3gAW7YYRtok2PKGupXKh1JHeAUItub28w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find book by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3ODc3NDMwLCJleHAiOjE2Njc5Mzc5MTB9.rKuatWbzmlngrOemychL9MJdp0ZQbJRq3UaXFvf3BDIBLBsPzTao-3gAW7YYRtok2PKGupXKh1JHeAUItub28w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book/32",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book",
+						"32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create book role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3NzkxOTg2LCJleHAiOjE2Njc4NTI0NjZ9.DULfH4qx7xT18Wlg_WwHeIW2pJnj3yevVwWsKTpdjXVSX_s3X6tp8a9FLMTU3kX0yyYObOi6JesTg2oVHjHWXQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\":\"Toan hoc 5\",\r\n    \"bookAmount\":\"40\",\r\n    \"firstLetter\":\"T\",\r\n    \"authorId\":\"2\",\r\n\r\n    \"categoryId\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create book role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\":\"Toan hoc 5100\",\r\n    \"bookAmount\":\"40\",\r\n    \"firstLetter\":\"T\",\r\n    \"authorId\": \"100\",\r\n    \"categoryId\":\"2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"50\",\r\n    \"bookName\":\"Toan hoc 5100\",\r\n    \"bookAmount\":\"40\",\r\n    \"firstLetter\":\"T\",\r\n    \"authorId\": \"100\",\r\n    \"categoryId\":\"2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3Nzk0Nzg5LCJleHAiOjE2Njc4NTUyNjl9.xkhqGddOxy5HB2VMLl8lW-LMNEZF-4ixq75UtgvEilwoMXZl38ITsf6JpqsXV_8UtFosirOrdDSoZreWUbvxeQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"50\",\r\n    \"bookName\":\"Toan hoc 5100\",\r\n    \"bookAmount\":\"40\",\r\n    \"firstLetter\":\"T\",\r\n    \"authorId\": \"100\",\r\n    \"categoryId\":\"2\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3NzkxNzU1LCJleHAiOjE2Njc4NTIyMzV9.3zeBjPtpI5k4nYgSsNI8IazWwCqhWkTWwx7T1eXave1rdgvjtQn9hedirjuPeg9YMlAKIAMWr3BRfuJ7uWCIYw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3Nzk0Nzg5LCJleHAiOjE2Njc4NTUyNjl9.xkhqGddOxy5HB2VMLl8lW-LMNEZF-4ixq75UtgvEilwoMXZl38ITsf6JpqsXV_8UtFosirOrdDSoZreWUbvxeQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/library/book/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"library",
+						"book",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find borrow list by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3OTYwNzYyLCJleHAiOjE2NjgwMjEyNDJ9.FegpnTMMLenYGi_kNY5ayANL5w_2erqkGEz5VU2J9yJ8VWUQAWiD3qE94zaHPoWI5656zFV1Zkm30jo2ygjrNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find borrow list by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find borrowlist by bookname",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3OTYwNzYyLCJleHAiOjE2NjgwMjEyNDJ9.FegpnTMMLenYGi_kNY5ayANL5w_2erqkGEz5VU2J9yJ8VWUQAWiD3qE94zaHPoWI5656zFV1Zkm30jo2ygjrNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\":\"Toan hoc 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/findByBookName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"findByBookName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find borrow list by username role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3OTYwNzYyLCJleHAiOjE2NjgwMjEyNDJ9.FegpnTMMLenYGi_kNY5ayANL5w_2erqkGEz5VU2J9yJ8VWUQAWiD3qE94zaHPoWI5656zFV1Zkm30jo2ygjrNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"long\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/findByUsername",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"findByUsername"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borrow list by username role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"long\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/findByUsername",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"findByUsername"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a borrow record with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" :\"long\",\r\n    \"bookName\": \"Tieng viet 6\",\r\n    \"limitDate\":\"2022-11-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a borrow record role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3ODg1MjYwLCJleHAiOjE2Njc5NDU3NDB9.MZFyq5EZyh__vYsnerqvnIlzzXnGhC1QySA-v2gTiscPaHj1cXwCkc-rxZO8YoZmJyXqHul6aSdBO0IFDM6DEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" :\"viet\",\r\n    \"bookName\": \"Toan hoc 1\",\r\n    \"limitDate\":\"2022-11-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "return a borrow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"returnDate\":\"2022-11-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/return/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"return",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update borrow role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Tieng viet 8\",\r\n    \"username\":\"long\",\r\n    \"limitDate\":\"2022-11-20\",\r\n    \"returnDate\":\"2022-11-15\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update borrow role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3OTYwNzYyLCJleHAiOjE2NjgwMjEyNDJ9.FegpnTMMLenYGi_kNY5ayANL5w_2erqkGEz5VU2J9yJ8VWUQAWiD3qE94zaHPoWI5656zFV1Zkm30jo2ygjrNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Tieng viet 8\",\r\n    \"username\":\"long\",\r\n    \"limitDate\":\"2022-11-20\",\r\n    \"returnDate\":\"2022-11-15\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete borrow role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3OTYwNzYyLCJleHAiOjE2NjgwMjEyNDJ9.FegpnTMMLenYGi_kNY5ayANL5w_2erqkGEz5VU2J9yJ8VWUQAWiD3qE94zaHPoWI5656zFV1Zkm30jo2ygjrNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/delete/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete borrow role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTYwMjU0LCJleHAiOjE2NjgwMjA3MzR9.6mdAnoQJWp6qZ_9xs5znDMqcQdP1CsnCAGWmTjb7YdlKbJUdRnXn1ugzNHUi_o2asKhO351gobxUfvBL8QAo5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/loan/delete/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"loan",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find book by bookname elastic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTg0NDQ4LCJleHAiOjE2NjgwNDQ5Mjh9.DtLNjx2Cihd7InC33sPW5jicTFOQZMiWitW-RMPiEPV9ZCcDm6S16qVUJ_qZNUIqjul7sr-SxkdoEQkk7Rljjw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"hinh hoc \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/elastic/book/findByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"elastic",
+						"book",
+						"findByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find author by author name elastic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTg0NDQ4LCJleHAiOjE2NjgwNDQ5Mjh9.DtLNjx2Cihd7InC33sPW5jicTFOQZMiWitW-RMPiEPV9ZCcDm6S16qVUJ_qZNUIqjul7sr-SxkdoEQkk7Rljjw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Long \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/elastic/author/findByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"elastic",
+						"author",
+						"findByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find category by category name elastic",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3OTg0NDQ4LCJleHAiOjE2NjgwNDQ5Mjh9.DtLNjx2Cihd7InC33sPW5jicTFOQZMiWitW-RMPiEPV9ZCcDm6S16qVUJ_qZNUIqjul7sr-SxkdoEQkk7Rljjw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"giao khoa \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/elastic/category/findByName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"elastic",
+						"category",
+						"findByName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find book amount by author name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDUxNzkyLCJleHAiOjE2NjgxMTIyNzJ9.kNEDMagsV1reWEJBD04PgidWqVQ7AJZj5Nk81BD_kjI_uAGWOFkD9lsG_bAF1PfMOD6jzFIfAQjOO7CoWXZDCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Tran Hoang Long\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/report/findBookByAuthor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"report",
+						"findBookByAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find book amount by category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDUxNzkyLCJleHAiOjE2NjgxMTIyNzJ9.kNEDMagsV1reWEJBD04PgidWqVQ7AJZj5Nk81BD_kjI_uAGWOFkD9lsG_bAF1PfMOD6jzFIfAQjOO7CoWXZDCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sach giao khoa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/report/findBookByCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"report",
+						"findBookByCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find book amount by first letter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDUxNzkyLCJleHAiOjE2NjgxMTIyNzJ9.kNEDMagsV1reWEJBD04PgidWqVQ7AJZj5Nk81BD_kjI_uAGWOFkD9lsG_bAF1PfMOD6jzFIfAQjOO7CoWXZDCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstLetter\":\"T\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/report/findBookByLetter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"report",
+						"findBookByLetter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "The most borrowed book in time",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDUxNzkyLCJleHAiOjE2NjgxMTIyNzJ9.kNEDMagsV1reWEJBD04PgidWqVQ7AJZj5Nk81BD_kjI_uAGWOFkD9lsG_bAF1PfMOD6jzFIfAQjOO7CoWXZDCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\":\"2022-11-01\",\r\n    \"endDate\":\"2022-11-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1.0/report/bookInTime",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"report",
+						"bookInTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book get borrowed in time",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDUxNzkyLCJleHAiOjE2NjgxMTIyNzJ9.kNEDMagsV1reWEJBD04PgidWqVQ7AJZj5Nk81BD_kjI_uAGWOFkD9lsG_bAF1PfMOD6jzFIfAQjOO7CoWXZDCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\":\"2022-11-01\",\r\n    \"endDate\":\"2022-11-20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8988/report/borrowInTime",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8988",
+					"path": [
+						"report",
+						"borrowInTime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send mail expired borrow",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY4MDc0MTg0LCJleHAiOjE2NjgxMzQ2NjR9.gunovz-9kE8LDsKvcapzX5XVfcGB7COHwL0TxexzaFCSaPx9KHAT5Kd2_6TKwg7kIc48e5Ibp0YtuEJEwlyhWA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1.0/cron/sendMail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1.0",
+						"cron",
+						"sendMail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

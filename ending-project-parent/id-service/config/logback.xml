@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name = "Console" class = "ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+               <!-- %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n-->
+                %black(%d{ISO8601}) %highlight(%-5level) [%green(%t)] %blue(%C{1.}): %msg%n%throwable
+            </pattern>
+        </encoder>
+    </appender>
+
+
+    <!--    <springProperty name="spring.log.url" source="spring.log.url"/>
+        <springProperty name="spring.log.username" source="spring.log.username"/>
+        <springProperty name="spring.log.password" source="spring.log.password"/>
+
+    <appender name="DB" class="ch.qos.logback.classic.db.DBAppender">
+            <connectionSource class="ch.qos.logback.core.db.DriverManagerConnectionSource">
+                <url>${spring.log.url}</url>
+                <user>${spring.log.username}</user>
+                <password>${spring.log.password}</password>
+            </connectionSource>
+    </appender> -->
+
+    <root level = "INFO" >
+        <appender-ref ref="Console"/>
+     <!--   <appender-ref ref="ROLLIN"/>-->
+       <!-- <appender-ref ref="DB"/>-->
+    </root>
+</configuration>

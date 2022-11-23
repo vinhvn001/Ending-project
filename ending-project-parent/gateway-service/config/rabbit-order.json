@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/order/getTimeOrder",
+    "method": "GET",
+    "rabbit": "rpc"
+  },
+  {
+    "path": "/order/orderRoom",
+    "method": "POST",
+    "rabbit": "rpc"
+  },
+  {
+    "path": "/order/updateOrder",
+    "method": "PUT",
+    "rabbit": "rpc"
+  },
+  {
+    "path": "/order/deleteOrder",
+    "method": "DELETE",
+    "rabbit": "rpc"
+  }
+]

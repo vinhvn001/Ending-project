@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "35db48e2-f247-42df-aec5-2a9f9dbe7f4a",
+		"name": "id-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22935470"
+	},
+	"item": [
+		{
+			"name": "login user role admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hoang\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user role default",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"thang\",\r\n    \"password\":\"12345\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find your user information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find a user with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgwNDA2LCJleHAiOjE2Njc0NDA4ODZ9.PiA8XAEk51INGBFct-_2v8szcNvydA5tZAwXndQXLfr6PGbkchq4VjDcFMSIyv3iyc0Mzvn8nm8LN9iEi9Br2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/findUser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"findUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find a user with role default",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzcwOTIxLCJleHAiOjE2Njc0MzE0MDF9.E4gsBlwV4KAbp0c2PI87m6eV-cDOWbPWzDgDBRkz5mr0IVpWV4kgizFyHZ_b6IwXgafUHROJal_2LUY54uun8w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/findUser/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"findUser",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all user with role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgwNDA2LCJleHAiOjE2Njc0NDA4ODZ9.PiA8XAEk51INGBFct-_2v8szcNvydA5tZAwXndQXLfr6PGbkchq4VjDcFMSIyv3iyc0Mzvn8nm8LN9iEi9Br2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/findAll/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"findAll",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all user with role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new user by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzczNDg0LCJleHAiOjE2Njc0MzM5NjR9.CN0OBKFvYgWHwMfd96z5fpWrGb14EM2MtVfi7ktxacjOUATPP1DpkGrxdSwH5LTGtXD3RCtp3mDsreLrqYmA2A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"long\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh long\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a new user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"long\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh long\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgwNDA2LCJleHAiOjE2Njc0NDA4ODZ9.PiA8XAEk51INGBFct-_2v8szcNvydA5tZAwXndQXLfr6PGbkchq4VjDcFMSIyv3iyc0Mzvn8nm8LN9iEi9Br2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh viet\",\r\n    \"roleName\":\"default\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgwODg4LCJleHAiOjE2Njc0NDEzNjh9.t9kn5YhdsqeddIX2EIN_Q5tiKoKUVID8-DTCTZMb5cbbBHYnZlkRujl4gJHp1ypZkwsxHiH2PuZHgW2OGKt8gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh viet\",\r\n    \"roleName\":\"default\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8588/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user by role admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjY3MzgyODg1LCJleHAiOjE2Njc0NDMzNjV9.lzJIng5doWqnSBVUiIiiwot1INbffYmFS6LRoeGijOyfpGGj1D3Wbc0rymX1SBBuVDXhl04eN1g5IjXFZfMA8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user by role default",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNjY3MzgyODE1LCJleHAiOjE2Njc0NDMyOTV9.-UAOx-T0y5V_UrAGrZeUxpU8XUxKFWCFIR0mSHgHm20l_0vLncnnEJMn8YQZym-t6S2nrTtkvXGF4GBuJ5jrFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8588/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8588",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

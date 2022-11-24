@@ -110,17 +110,17 @@ public class GatewayConfig {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println("RPC_TIMEOUT: " + RPC_TIMEOUT);
-//
-        List<String> userPathList = SERVICE_PATH_MAP.get("user");
-        userPathList.forEach((path) -> {
-            System.out.println(path);
-        });
-        String requestPath = "/user";
-        System.out.println("Contain path " + requestPath + " ==> " + userPathList.contains(requestPath));
-        String rabbitType = RABBIT_TYPE_MAP.get("GET /user");
-        System.out.println("rabbitType for GET /user: " + rabbitType);
+//    public static void main(String[] args) {
+//        System.out.println("RPC_TIMEOUT: " + RPC_TIMEOUT);
+
+//        List<String> userPathList = SERVICE_PATH_MAP.get("user");
+//        userPathList.forEach((path) -> {
+//            System.out.println(path);
+//        });
+//        String requestPath = "/user";
+//        System.out.println("Contain path " + requestPath + " ==> " + userPathList.contains(requestPath));
+//        String rabbitType = RABBIT_TYPE_MAP.get("GET /user");
+//        System.out.println("rabbitType for GET /user: " + rabbitType);
 
 //        //list
 //        String service = "user";
@@ -134,5 +134,5 @@ public class GatewayConfig {
 //
 //        System.out.println(rpcExchange + "," + rpcQueue + "," + rpcKey + "\n" + workerQueue
 //                + "\n" + directExchange + "," + directQueue + "," + directKey);
-   }
+//   }
 }

@@ -35,7 +35,12 @@ public class RoomOrderServiceImpl implements RoomOrderService {
     }
 
     @Override
-    public List<RoomOrder> findByRoomName(String roomName) {
+    public List<Object[]> findByRoomName(String roomName) {
         return roomOrderRepository.findByRoomName(roomName);
+    }
+
+    @Override
+    public List<Object[]> findAllTime() {
+        return roomOrderRepository.findAllTime();
     }
 }

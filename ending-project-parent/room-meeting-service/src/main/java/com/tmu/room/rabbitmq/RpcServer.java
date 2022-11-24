@@ -18,10 +18,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 
-/**
- *
- * @author Admin
- */
+
 public class RpcServer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcServer.class);

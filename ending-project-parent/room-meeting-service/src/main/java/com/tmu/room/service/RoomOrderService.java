@@ -14,5 +14,7 @@ public interface RoomOrderService {
 
     void remove(Long id);
 
-    List<RoomOrder> findByRoomName(String roomName);
+    List<Object[]> findByRoomName(String roomName);
+
+    List<Object[]> findAllTime();
 }

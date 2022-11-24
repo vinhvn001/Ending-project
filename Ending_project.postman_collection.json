@@ -1,0 +1,586 @@
+{
+	"info": {
+		"_postman_id": "eff2800d-280d-4456-99bf-f0eb486c6726",
+		"name": "Ending_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22935470"
+	},
+	"item": [
+		{
+			"name": "id_service",
+			"item": [
+				{
+					"name": "login user role admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"hoang\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/login",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user role default",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"thang\",\r\n    \"password\":\"12345\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/login",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find your user information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all user with role admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/findAll",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find all user with role default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_default}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/findAll",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"findAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find a user with role admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/findUser/1",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"findUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find a user with role default",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_default}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/findUser/1",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"findUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a new user by role admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"long\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh long\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/create",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create a new user by role default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_default}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"long\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh long\",\r\n    \"roleName\":\"default\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/create",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a user by role admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh viet\",\r\n    \"roleName\":\"default\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/2",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a user by role default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"viet\",\r\n    \"password\":\"1234\",\r\n    \"fullName\":\"tran thanh viet\",\r\n    \"roleName\":\"default\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/2",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a user by role admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a user by role default",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_default}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/user/1",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room_order_service",
+			"item": [
+				{
+					"name": "Order a room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start\":\"2022-12-23 09:00:00\",\r\n    \"end\":\"2022-12-23 09:25:00\",\r\n    \"roomName\":\"room 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/order/orderRoom",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"order",
+								"orderRoom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get ordered time",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/order/getTimeOrder?roomName=room 3",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"order",
+								"getTimeOrder"
+							],
+							"query": [
+								{
+									"key": "roomName",
+									"value": "room 3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roomName\": \"room 2\",\r\n    \"start\": \"2022-12-23 13:00:00\",\r\n    \"end\":\"2022-12-23 14:25:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host_link_gateWay}}/order/updateOrder?id=25",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"order",
+								"updateOrder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt_token_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_link_gateWay}}/order/deleteOrder?id=23",
+							"host": [
+								"{{host_link_gateWay}}"
+							],
+							"path": [
+								"order",
+								"deleteOrder"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "23"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

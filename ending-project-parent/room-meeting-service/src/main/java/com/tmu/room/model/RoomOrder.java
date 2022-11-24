@@ -14,6 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "room_order")
 public class RoomOrder implements Serializable {
 
     @Id
@@ -27,10 +28,10 @@ public class RoomOrder implements Serializable {
     @Column(name = "room_name")
     private String roomName;
 
-    @Column(name = "start")
+    @Column(name = "start_time")
     private Date start;
 
-    @Column(name = "end")
+    @Column(name = "end_time")
     private Date end;
 
 }
